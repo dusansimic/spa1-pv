@@ -2,7 +2,7 @@
 
 ## Zadatak 1
 
-Napisati program koji pravi fajl `fajl1.txt` i u njega upisuje sledeći tekst:
+Napisati program koji na disku kreira fajl imena `fajl1.txt` i u njega upisuje:
 ```
 Prvi red
 Drugi red
@@ -12,16 +12,16 @@ Cetvrti red
 
 ## Zadatak 2
 
-Napisati program koji otvara fajl `fajl1.txt` i iz njega čita i ispisuje na ekran sav sadržaj.
+Napisati program koji ispisuje sadržaj fajla `fajl1.txt` na ekran.
 
 ## Zadatak 2a
 
-Napisati program koji otvara fajl koji je korisnik uneo (naziv fajla koji je korisnik uneo) i iz njega čita i ispisuje na ekran sav sadržaj.
+Prepraviti program da izlistava fajl čije je ime korisnik uneo.
 
 ## Zadatak 3
 
-Napisati program koji otvara fajl `brojevi.txt` u kome se nalaze realni brojevi. Iz njega treba pročitati sve realne projeve i izračunati i ispisati njihovu sumu i prosek.
+Iz fajla [`brojevi.txt`](./brojevi.txt) učitati sve realne brojeve i izračunati sumu i prosek brojeva.
 
 ## Zadatak 4
 
-Napisati program u kom korisnik unosi neko ime. Proveriti da li se to ime nalazi u fajlu čestih imena, `imena.txt`. Ispisati odgovarajuću poruku za svaki ishod.
+Fajl [`imena.txt`](./imena.txt) sadrži česta imena. Svako ime nalazi se u posebnom redu u fajlu i nema duplikata. Napisati program koji proverava da li se string koji unosi korisnik nalazi u fajlu i ispisuje odgovarajuću poruku. Ukoliko se string ne nalazi u fajlu program treba da dopiše string na kraj fajla.

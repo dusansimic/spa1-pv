@@ -10,8 +10,12 @@ class Program4 {
 			}
 		}
 
+		Svetovid.in("imena.txt").close();
+
 		if (doMore) {
 			System.out.println(String.format("Ime %s nije nadjeno u fajlu!", ime));
+			Svetovid.append("imena.txt").println(ime);
+			Svetovid.append("imena.txt").close();
 		}
 	}
 }
