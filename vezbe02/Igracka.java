@@ -10,6 +10,6 @@ class Igracka {
 	}
 
 	public String toString() {
-		return String.format("Tip: %s Boja: %s Cena: %.2f", this.tip, this.boja, this.cena);
+		return String.format("%s %s %.2f", this.tip, this.boja, this.cena);
 	}
 }

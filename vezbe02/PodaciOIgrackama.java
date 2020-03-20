@@ -9,6 +9,7 @@ class PodaciOIgrackama {
 
 	public boolean dodaj(Igracka igracka) {
 		if (this.count >= MAX_IGRACAKA) {
+			Svetovid.out.println(String.format("Niz sa podacima o igrackama je pun. Ima ukupno %d igracaka u nizu.", MAX_IGRACAKA));
 			return false;
 		}
 
@@ -41,8 +42,13 @@ class PodaciOIgrackama {
 		SvetovidReader fIgracke = Svetovid.in(filename);
 
 		while (fIgracke.hasMore() && this.count < MAX_IGRACAKA) {
-			this.dodaj(new Igracka(fIgracke.readToken(), fIgracke.readToken(), fIgracke.readDouble()));
+			this.igracke[this.count++] = new Igracka(fIgracke.readToken(), fIgracke.readToken(), fIgracke.readDouble());
 		}
+
+		if (fIgracke.hasMore()) {
+			Svetovid.out.println(String.format("Previse igracaka u fajlu! Ucitano prvih %d igracaka.", MAX_IGRACAKA));
+		}
+
 		fIgracke.close();
 
 		return true;
@@ -66,5 +72,15 @@ class PodaciOIgrackama {
 		}
 
 		return br;
+	}
+
+	public String toString() {
+		String output = "";
+
+		for (int i = 0; i < this.count; i++) {
+			output += String.format("%s\n", this.igracke[i]);
+		}
+
+		return output;
 	}
 }
