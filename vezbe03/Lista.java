@@ -49,7 +49,9 @@ class Lista {
 		Node curr;
 		for (curr = this.head; curr.next != null; curr = curr.next);
 
-		Svetovid.out.println(String.format("Poslednji element niza je %s.", curr.data));
+		if (curr != null) {
+			Svetovid.out.println(String.format("Poslednji element niza je %s.", curr.data));
+		}
 	}
 
 	public boolean ucitaj(String filename) {
