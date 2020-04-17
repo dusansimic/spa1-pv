@@ -10,11 +10,9 @@ class Lista {
 	}
 
 	Node head;
-	int count;
 
 	public Lista() {
 		this.head = null;
-		this.count = 0;
 	}
 
 	public void dodaj(String data) {
@@ -22,8 +20,6 @@ class Lista {
 
 		element.next = this.head;
 		this.head = element;
-
-		this.count++;
 	}
 
 	public int prebrojVelikaSlova() {
@@ -40,15 +36,26 @@ class Lista {
 
 	public double prosecnaDuzina() {
 		double suma = 0.0;
+		int broj = 0;
 
 		for (Node curr = this.head; curr != null; curr = curr.next) {
 			suma += curr.data.length();
+			broj++;
 		}
 
-		return suma / (double) this.count;
+		if (broj == 0) {
+			Svetovid.out.println("Lista je prazna!");
+			return 0;
+		}
+
+		return suma / (double) broj;
 	}
 
 	public void brisiVeci() {
+		if (this.head == null) {
+			return;
+		}
+
 		Node prev = this.head;
 
 		while (prev.next != null) {
